@@ -1,0 +1,19 @@
+{
+    "name": "the/masters",
+    "short_name": "the/masters",
+    "icons": [
+        {
+            "src": "/assets/favicon/android-chrome-192x192-9345f68988278e917659cdc8acaa8fb99332d5f07bb0b132c016a199246fc0cc.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/android-chrome-256x256-a82ce8b02cd760af4ee22308690850ad2cf8da580966c688580c90d3ece0069c.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

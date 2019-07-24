@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+  <title>Contact Us - Kvictor</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="public/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="public/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="public/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="public/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="public/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="public/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="public/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="public/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="public/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="public/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="public/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="public/assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="public/assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-title" content="the/masters">
+  <meta name="application-name" content="the/masters">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="public/assets/favicon/browserconfig-c69d5e938f360ba9d2a538239d3415c30b10760abcf4a9bce986b3484f3d562a.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" media="all" href="public/assets/application.css  " data-turbolinks-track="reload" />
+  <script src="public/assets/application.js  " data-turbolinks-track="reload"></script>
+</head>
+
+<body>
+  <nav class="mobile-nav visible-xs-block">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="logo"><a href="/"><img alt="Kvictor Logo" srcset="/public/assets/common/logo@2x-f53a783ea1ab708f48d0696a7dda9a812126002d31ef106e9364b211a890183f.png 2x" src="public/assets/common/logo-7a61a9e50dc9d3581c81183c32d0115c5ab0408ca2e7065c7d0e26cf5effda5b.png" /></a></div>
+        <div class="collapsed" data-target="#collapse-mobile-nav" data-toggle="collapse" id="nav-icon"><span></span><span></span><span></span></div>
+      </div>
+      <div class="collapse" id="collapse-mobile-nav">
+        <ul class="navbar-nav mr-auto">
+          <li><a href="/services">Services</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/about-us">About us</a></li>
+          <li><a href="/careers">Careers</a></li>
+        </ul>
+        <div class="text-align-center"><button class="contact" onclick="window.location.href=&#39;/contact&#39;">Contact us</button></div>
+      </div>
+    </div>
+  </nav>
+  <div class="stripes-top">
+    <div class="desktop visible-lg">
+      <div class="trigger"></div>
+      <div class="stripe top"></div>
+      <div class="stripe middle"></div>
+      <div class="stripe bottom"></div>
+    </div>
+    <div class="mobile visible-xs-block">
+      <div class="trigger"></div>
+      <div class="stripe top"></div>
+      <div class="stripe middle"></div>
+      <div class="stripe bottom"></div>
+    </div>
+  </div>
+  <div id="contact">
+    <div class="head-section">
+      <div class="overlay">
+        <div class="container above-stripe">
+          <div class="desktop-nav hidden-xs">
+            <div class="logo"><a href="/"><img alt="Kvictor Logo" srcset="/public/assets/common/logo@2x-f53a783ea1ab708f48d0696a7dda9a812126002d31ef106e9364b211a890183f.png 2x" src="public/assets/common/logo-7a61a9e50dc9d3581c81183c32d0115c5ab0408ca2e7065c7d0e26cf5effda5b.png" /></a></div>
+            <div class="nav">
+                <ul class="list-inline">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/about-us">About us</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                </ul>
+            </div>
+            <div class="contact"><a class="contact" href="/contact">Contact us</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-section">
+      <div class="container above-stripe">
+        <div class="row">
+          <div class="col-md-12 col-xs-12 col-sm-12">
+            <p class="highlight above-stripe">How about we start form a free quote and some business and tech consulting to make sure your idea meets the latest tech trends?</p>
+          </div>
+          <div class="col-md-12 col-xs-12 col-sm-12">
+            <h2 class="get-in-touch">Get in touch</h2>
+            <form method="post" action="send" class="contact-form above-stripe" >
+              <div class="container">
+                <div>
+                  <h6 class="success-message">{{msg}}</h6>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-xs-12 col-sm-6">
+                    <div class="form-group">
+                      <label>Your name</label>
+                      <input class="form-control" id="name" name="name" required="" type="text" />
+                      <div class="error-message" data-input="name"></div>
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input class="form-control" id="email" name="email" required="" type="email" />
+                      <div class="error-message" data-input="email"></div>
+                    </div>
+                    <div class="form-group hidden">
+                      <input value="client" type="hidden" name="category" id="user_inquiry_category" />
+                    </div>
+                    <div class="form-group">
+                      <label>Phone number (optional)</label>
+                      <input class="form-control" id="phone" name="phone" type="text" />
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-xs-12 col-sm-6">
+                    <div class="form-group">
+                      <label>Project description</label>
+                      <div class="textarea-box">
+                        <textarea class="form-control" id="message" name="message" placeholder="Your message..."></textarea>
+                        <div class="error-message" data-input="file"></div>
+                        <div class="attachment">
+                          <label data-label="Add specification" for="file">
+                            <i class="fa fa-paperclip"></i>Add specification
+                          </label>
+                          <input class="form-control" id="file" name="file" type="file" />
+                          <a class="hidden" id="clear-btn">&#x2715;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div class="get-free-evaluation text-align-center">
+                      <button class="common" type="submit">Get a free quote</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="masters-modal modal" id="contact-modal" role="dialog" tabindex="-1">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body"><span>SUCCESS</span>
+                    <h2 id="modal-title">Thanks for submitting the form!</h2>
+                    <p id="modal-description">Left the rest to us.<br />Keep calm and we will contact you shortly.</p><button class="common" data-dismiss="modal" type="button">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row address">
+          <div class="col-md-12 col-xs-12 col-sm-12">
+            <div class="col-md-6 col-xs-12 col-sm-6 above-stripe">
+              <h2 class="our-office">Our office</h2>
+              <div class="office">
+                <p>Kvictor Pvt Ltd <br />Flat no G-03, Bramhaputra Apts,<br />Aakar Nagar, M B Estate <br />Nagpur, India 440013.</p>
+                <!-- <p> Phone : +91 - 7620776511 </p> -->
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12 col-sm-6">
+              <div class="direct-contact">
+                <h2 style="margin-bottom: 0px">Contact us directly</h2>
+                <div class="desc">
+                  <h2>Parag Khobragade</h2><span><b>Chief Sales Officer</b></span><a href="tel:+917620776511">
+                    <p>+91 7620776511<i class="fa fa-phone"></i></p>
+                  </a><a href="mailto:info@kvictor.com" target="_blank">
+                    <p>info@kvictor.com<i class="fa fa-envelope"></i></p>
+                  </a><a href="skype:kvictor.skype?call">
+                    <p>Skype call<i class="fab fa-skype"></i></p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stripes-bottom">
+    <div class="desktop visible-lg">
+      <div class="trigger"></div>
+      <div class="stripe top"></div>
+      <div class="stripe middle"></div>
+      <div class="stripe bottom"></div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="col-xs-12 col-sm-6 col-md-3 col logo-col"><a class="active" aria-current="page" href="/"><img alt="Kvictor Logo" srcset="/public/assets/common/logo-white@2x-4032c6002c03f81dbb6d165b29159bb501465affe3108e090fc43100bd258eec.png 2x"
+            src="public/assets/common/logo-white-7ffb77ff385f90229ac8168274bd3317d4b3f0db32309d659173230bda59c838.png" /></a></div>
+      <div class="col-xs-12 col-sm-6 col-md-2 col menu-col"><span>COMPANY</span>
+        <div class="content">
+          <p><a href="services.html">Services</a></p>
+          <p><a href="portfolio.html">Portfolio</a></p>
+          <p><a href="about-us.html">About us</a></p>
+          <p><a href="career.html">Careers</a></p>
+          <p><a href="contact.html">Contact Us</a></p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col info-col"><span>INFO AND CONTACT</span>
+        <div class="content">
+          <p>Kvictor Pvt Ltd <br />Flat no G-03, Bramhaputra Apts,<br />Aakar Nagar, M B Estate <br />Nagpur, India 440013.</p>
+          <p> Phone : +91 - 7620776511 </p>
+          <br />
+          <a href="mailto:michal@Kvictor.com" target="_blank">info@kvictor.com<i class="fa fa-envelope"></i></a><br /><a href="skype:nikhiltj.007?call">Skype call<i class="fab fa-skype"></i></a></p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col follow-col"><span>FOLLOW US</span>
+        <div class="d-block media"><a href="https://www.facebook.com/Kvictor.com/" rel="nofollow" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.linkedin.com/company/kvictor.com/" rel="nofollow" target="_blank"><i class="fab fa-linkedin-in"></i></a><a
+            href="https://www.instagram.com/Kvictor.com/" rel="nofollow" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://twitter.com/kvictor.com" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a><a href="https://github.com/Kvictor"
+            rel="nofollow" target="_blank"><i class="fab fa-github"></i></a></div>
+      </div>
+      <div class="copyright col-xs-12">Copyright © 2019 Kvictor. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
