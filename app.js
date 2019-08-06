@@ -1,10 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
-const nodemailer = require('nodemailer');
+const sgMail = require('@sendgrid/mail');
 const path = require('path');
 
 const app = express();
+
+const dotenv = require('dotenv');
+dotenv.config();
 
 // View Engine Setup
 app.engine('handlebars', exphbs());
@@ -52,10 +55,9 @@ app.get('/careers/mern-developer',(req, res) => {
   res.render('mern-stack-developer', {layout: false});
 });
 
-
 app.post('/send', (req, res) => {
-  console.log(req.body);
-  const output =
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const info =
       ` <p>You have new contact message from KVICTOR Website</p>
         <h3>CONTACT DETAILS</h3>
         <ul>
@@ -64,36 +66,83 @@ app.post('/send', (req, res) => {
           <li>Phone   -> ${req.body.phone}</li>
           <li>Message -> ${req.body.message}</li>
         </ul> `;
-  // Nodemailer Code Below here
-      // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: 'patsy.murray@ethereal.email',
-        pass: 'BDJnAfbC1sdCfUHM7N'
-      }
-    });
 
-    // send mail with defined transport object
-     transporter.sendMail({
-      from: '"KVICTOR PVT LTD" <patsy.murray@ethereal.email>', // sender address
-      to: "patsy.murray@ethereal.email", // list of receivers
-      subject: "Hello ✔", // Subject line
-      text: "Hello world?", // plain text body
-      html: output // html body
-      },(error, info) => {
-      if(error){
-        return console.log(error);
-      }
+  const replymsg =
+      ` <div>
+          <p>Dear ${req.body.name},</p>
+          <p><strong>Thank you for getting in touch!</strong></p>
 
-      res.render('contact', { msg:'Message sent successfully.'});
+          <p> We appreciate you contacting us. One of our customer happiness members will be getting back to you shortly. </p>
 
-    });
-  // Nodemailer Code Ends here
+          <p>Thanks in advance for your patience.</p>
+
+          <p>Have a great day! </p>
+
+        </div>
+        `;      
+
+  const msg = {
+    to: 'nikhilbramha@gmail.com',
+    from: 'contact@kvictor.com',
+    subject: 'Sending From Kvictor Website Contact Form',
+    html: info
+   };
+
+  const reply = {
+    to: req.body.email,
+    from: 'contact@kvictor.com',
+    subject: 'Thank you | Kvictor Pvt Ltd',
+    html: replymsg
+   };
+
+  sgMail.send(msg);
+  sgMail.send(reply);
+
+  res.render('contact', { msg:'Message sent successfully.'});
 
 });
+
+
+// app.post('/send', (req, res) => {
+//   console.log(req.body);
+//   const output =
+//       ` <p>You have new contact message from KVICTOR Website</p>
+//         <h3>CONTACT DETAILS</h3>
+//         <ul>
+//           <li>Name    -> ${req.body.name}</li>
+//           <li>Email   -> ${req.body.email}</li>
+//           <li>Phone   -> ${req.body.phone}</li>
+//           <li>Message -> ${req.body.message}</li>
+//         </ul> `;
+//   // Nodemailer Code Below here
+//       // create reusable transporter object using the default SMTP transport
+//     let transporter = nodemailer.createTransport({
+//       host: "smtp.ethereal.email",
+//       port: 587,
+//       secure: false, // true for 465, false for other ports
+//       auth: {
+//         user: 'patsy.murray@ethereal.email',
+//         pass: 'BDJnAfbC1sdCfUHM7N'
+//       }
+//     });
+
+//     // send mail with defined transport object
+//      transporter.sendMail({
+//       from: '"KVICTOR PVT LTD" <patsy.murray@ethereal.email>', // sender address
+//       to: "patsy.murray@ethereal.email", // list of receivers
+//       subject: "Hello ✔", // Subject line
+//       text: "Hello world?", // plain text body
+//       html: output // html body
+//       },(error, info) => {
+//       if(error){
+//         return console.log(error);
+//       }
+
+//       res.render('contact', { msg:'Message sent successfully.'});
+
+//     });
+//   // Nodemailer Code Ends here
+// });
 
 app.use(function(req, res, next){
   res.status(404);
